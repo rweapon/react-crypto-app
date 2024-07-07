@@ -1,16 +1,32 @@
 {
-  "name": "react-crypto-initial",
+  "name": "react-crypto-app",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "type": "module",
+  "homepage": "https://rweapon.github.io/react-crypto-app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "antd": "^5.19.1",
+    "gh-pages": "^6.1.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8"
   }
 }
